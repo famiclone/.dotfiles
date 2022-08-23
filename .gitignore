@@ -1,0 +1,10 @@
+.DS_Store
+.config/nvim/packer.vim
+
+
+.config/ranger/plugins/__pycache__/
+.config/ranger/plugins/__init__.py
+
+.config/gtk-3.0/servers
+.config/gtk-3.0/bookmarks
+todo.md

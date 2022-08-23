@@ -1,0 +1,5 @@
+---
+dotfiles_source_dir: "{{ playbook_dir }}/configs"
+dotfiles:
+  - src: "{{ dotfiles_source_dir }}/.zshrc"
+    dest: "{{ ansible_env.HOME }}/.zshrc"

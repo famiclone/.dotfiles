@@ -1,0 +1,5 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install ohmyzsh
+      shell: 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
