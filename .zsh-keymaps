@@ -1,0 +1,4 @@
+# Keymaps
+bindkey -s ^f "~/.scripts/tmux-sessionizer \n"
+bindkey -s ^s "~/.scripts/tmux-select-session \n"
+bindkey -s ^p "~/.scripts/git-commit-checkout \n"

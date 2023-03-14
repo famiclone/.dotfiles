@@ -1,0 +1,18 @@
+[alias]
+  st   = status -s
+  cm   = commit
+  type = cat-file -t
+  dump = cat-file -d
+  logg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  n    = log --reverse --pretty=%H main | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
+  p    = checkout HEAD^1
+
+[user]
+  email = denys@famiclone.dev
+  name = Denys Tynok
+
+[core]
+  editor = nvim
+
+[color]
+  ui = true

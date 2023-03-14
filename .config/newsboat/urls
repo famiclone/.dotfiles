@@ -1,0 +1,23 @@
+# Tech
+"query:* Reddit:( rssurl =~ \"reddit\" and unread == \"yes\" )"
+
+# Blogs
+http://blog.mozilla.com/nnethercote/feed/ "~Nicholas Nethercote, Mozilla" blogs
+
+# https://archlinux.org/feeds/news/ "~Arch News"
+# https://www.reddit.com/r/archlinux/.rss "~/r/archlinux"
+# https://www.reddit.com/r/xmonad/.rss "~/r/xmonad"
+# https://www.reddit.com/r/unixporn/.rss "~/r/unixporn"
+# https://www.reddit.com/r/thinkpad/.rss "~/r/thinkpad"
+# https://www.reddit.com/r/neovim/.rss "~/r/neovim"
+# https://www.reddit.com/r/zsh/.rss "~/r/zsh"
+# https://www.reddit.com/r/typescript/.rss "~/r/typescript"
+# https://www.reddit.com/r/javascript/.rss "~/r/javascript"
+# https://www.reddit.com/r/commandline/.rss "~/r/commandline"
+
+# Programming
+https://www.2ality.com "~2ality" blogs javascript
+https://webkit.org/blog/feed/ "~WebKit" blogs browser
+https://blog.nodejs.org/feed/ "~Node.js" blogs javascript 
+https://techblog.netflix.com/feeds "~Netflix techblog" blogs tech
+https://www.taniarascia.com/rss.xml "~Tania Rascia" blogs javascript

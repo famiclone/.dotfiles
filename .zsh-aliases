@@ -1,0 +1,23 @@
+if [ -f /usr/bin/grc ]; then
+ alias gcc="grc --colour=auto gcc"
+ alias irclog="grc --colour=auto irclog"
+ alias log="grc --colour=auto log"
+ alias netstat="grc --colour=auto netstat"
+ alias ping="grc --colour=auto ping"
+ alias proftpd="grc --colour=auto proftpd"
+ alias traceroute="grc --colour=auto traceroute"
+fi
+alias python=/usr/bin/python3
+
+# MacOS JavascriptCore
+#alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc
+
+# Download youtube mp4 video in best quality
+alias ydl="youtube-dl -ciw $1 --format \"bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best\" --merge-output-format mp4"
+alias ydla="youtube-dl --extract-audio --audio-format mp3 $1"
+
+alias cat=bat
+alias :q=exit
+#alias ls="exa --long --git"
+
+alias nms="find ~/Projects -name "node_modules" -type d -prune -print | xargs du -chs"

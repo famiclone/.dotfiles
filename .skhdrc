@@ -1,0 +1,63 @@
+# alt - is modifier
+
+# Move focus
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+
+# Move window
+shift + alt - h : yabai -m window --warp west
+shift + alt - l : yabai -m window --warp east
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+
+# Float window and center
+shift + alt - space: yabai -m window --toggle float;\
+                     yabai -m window --grid 4:4:1:1:2:2
+
+# Toggle split type
+alt - v : yabai -m window --toggle split
+
+# Resize window
+ctrl + alt - h : yabai -m window --resize left:-20:0
+ctrl + alt - j : yabai -m window --resize bottom:0:20
+ctrl + alt - k : yabai -m window --resize top:0:-20
+ctrl + alt - l : yabai -m window --resize right:20:0
+
+# Close window
+shift + alt - q : yabai -m window --close
+
+# Open terminal
+alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# Go to space
+alt - 1: yabai -m space --focus 1
+alt - 2: yabai -m space --focus 2
+alt - 3: yabai -m space --focus 3
+alt - 4: yabai -m space --focus 4
+alt - 5: yabai -m space --focus 5
+alt - 6: yabai -m space --focus 6
+alt - 7: yabai -m space --focus 7
+alt - 8: yabai -m space --focus 8
+alt - 9: yabai -m space --focus 9
+
+# Send to space
+shift + alt - 1: yabai -m window --space 1
+shift + alt - 2: yabai -m window --space 2
+shift + alt - 3: yabai -m window --space 3
+shift + alt - 4: yabai -m window --space 4
+shift + alt - 5: yabai -m window --space 5
+shift + alt - 6: yabai -m window --space 6
+shift + alt - 7: yabai -m window --space 7
+shift + alt - 8: yabai -m window --space 8
+shift + alt - 9: yabai -m window --space 9
+
+# Focus desktop
+alt - n : yabai -m display --focus recent
+
+shift + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && sudo yabai --load-sa
+
+
+shift + alt - s: yabai -m window [<source_window_sel>] --stack <target_window_sel>
+
