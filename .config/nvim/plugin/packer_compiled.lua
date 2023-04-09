@@ -79,80 +79,50 @@ _G.packer_plugins = {
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["cmp-buffer"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/emmet-vim",
-    url = "https://github.com/mattn/emmet-vim"
-  },
-  fzf = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/fzf",
-    url = "https://github.com/junegunn/fzf"
-  },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/fzf.vim",
-    url = "https://github.com/junegunn/fzf.vim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
+  harpoon = {
     loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["gruvbox.nvim"] = {
+  ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-gps"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/nvim-gps",
-    url = "https://github.com/SmiteshP/nvim-gps"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -175,37 +145,47 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rest.nvim"] = {
-    config = { "\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvim,\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\2L\0\2\0\r%Y-%m-%d\tdate\aos/\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\2L\0\2\0\rdate +%U\fexecute\aosè\3\1\0\6\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0025\3\r\0003\4\f\0=\4\14\0033\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\29custom_dynamic_variables\n$week\0\n$date\1\0\0\0\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\3\19show_http_info\2\rshow_url\2\17show_headers\2\14highlight\1\0\2\fenabled\2\ftimeout\3ñ\1\1\0\a\28result_split_horizontal\1\20jump_to_request\1\17yank_dry_run\2\15encode_url\2\26skip_ssl_verification\1\26result_split_in_place\1\renv_file\t.env\nsetup\14rest-nvim\frequire\0" },
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/rest-nvim/rest.nvim"
+  },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   ["vim-closetag"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-closetag",
     url = "https://github.com/alvan/vim-closetag"
   },
-  ["vim-dasht"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-dasht",
-    url = "https://github.com/sunaku/vim-dasht"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 -- Config for: rest.nvim
 time([[Config for rest.nvim]], true)
-try_loadstring("\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvim,\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\2L\0\2\0\r%Y-%m-%d\tdate\aos/\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\2L\0\2\0\rdate +%U\fexecute\aosè\3\1\0\6\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0025\3\r\0003\4\f\0=\4\14\0033\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\29custom_dynamic_variables\n$week\0\n$date\1\0\0\0\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\3\19show_http_info\2\rshow_url\2\17show_headers\2\14highlight\1\0\2\fenabled\2\ftimeout\3ñ\1\1\0\a\28result_split_horizontal\1\20jump_to_request\1\17yank_dry_run\2\15encode_url\2\26skip_ssl_verification\1\26result_split_in_place\1\renv_file\t.env\nsetup\14rest-nvim\frequire\0", "config", "rest.nvim")
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "rest.nvim")
 time([[Config for rest.nvim]], false)
 
 _G._packer.inside_compile = false

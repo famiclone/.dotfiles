@@ -1,3 +1,8 @@
+
+require('rose-pine').setup({
+    disable_background = true
+})
+
 local colors = {
   fg = '#ececec',
   bg = '#282828',
@@ -15,9 +20,8 @@ local colors = {
 
 vim.cmd("hi clear")
 vim.cmd("syntax reset")
-vim.cmd("colorscheme gruvbox")
+vim.cmd.colorscheme("rose-pine")
 vim.o.background = "dark"
---vim.cmd("colorscheme monokai")
 
 local function highlight(group, table)
   local fg = table.fg or 'None'
@@ -42,4 +46,5 @@ for key, value in pairs(groups) do
  highlight(key, value)
 end
 
-return colors
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
