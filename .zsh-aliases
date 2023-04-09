@@ -13,8 +13,8 @@ alias python=/usr/bin/python3
 #alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc
 
 # Download youtube mp4 video in best quality
-alias ydl="youtube-dl -ciw $1 --format \"bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best\" --merge-output-format mp4"
-alias ydla="youtube-dl --extract-audio --audio-format mp3 $1"
+alias ydl="yt-dlp -ciw $1 --format \"bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best\" --merge-output-format mp4"
+alias ydla="yt-dlp --extract-audio --audio-format mp3 $1"
 
 alias cat=bat
 alias :q=exit

@@ -61,3 +61,7 @@ vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Previous("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next("<CR>")', { silent = true, expr = true })
+
+vim.keymap.set("n", "<leader>r", "<Plug>RestNvim<CR>", { silent = true, desc = "Rest" })
+vim.keymap.set("n", "<leader>rp", "<Plug>RestNvimPreview<CR>", { silent = true, desc = "Rest preview" })
+vim.keymap.set("n", "<leader>rl", "<Plug>RestNvimLast<CR>", { silent = true, desc = "Rest last" })
