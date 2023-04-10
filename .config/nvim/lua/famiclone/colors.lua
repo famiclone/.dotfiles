@@ -1,7 +1,7 @@
 
-require('rose-pine').setup({
-    disable_background = true
-})
+--require('rose-pine').setup({
+--    disable_background = true
+--})
 
 local colors = {
   fg = '#ececec',
@@ -20,7 +20,7 @@ local colors = {
 
 vim.cmd("hi clear")
 vim.cmd("syntax reset")
-vim.cmd.colorscheme("rose-pine")
+vim.cmd("colorscheme sonokai")
 vim.o.background = "dark"
 
 local function highlight(group, table)
