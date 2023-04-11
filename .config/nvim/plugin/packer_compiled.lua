@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  orgmode = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/orgmode",
+    url = "https://github.com/nvim-orgmode/orgmode"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/packer.nvim",
