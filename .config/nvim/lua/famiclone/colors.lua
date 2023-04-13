@@ -1,4 +1,3 @@
-
 --require('rose-pine').setup({
 --    disable_background = true
 --})
@@ -29,7 +28,7 @@ local function highlight(group, table)
   local gui = table.gui and table.gui or 'None'
   local ctermbg = table.ctermbg and table.ctermbg or 'None'
 
-  vim.cmd('hi ' .. group .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. gui .. ' ctermbg=' .. ctermbg )
+  vim.cmd('hi ' .. group .. ' guifg=' .. fg .. ' guibg=' .. bg .. ' gui=' .. gui .. ' ctermbg=' .. ctermbg)
 end
 
 local groups = {
@@ -37,13 +36,20 @@ local groups = {
     bg = 'None',
     ctermbg = 'None'
   },
+  EndOfBuffer = {
+    bg = 'None',
+    ctermbg = 'None'
+  },
   GitSignsChange = {
     fg = colors.info,
   },
+  NvimTreeNormal = { fg = colors.fg, bg = colors.bg },
+  NvimTreeEndOfBuffer = { fg = colors.fg, bg = colors.bg },
+  NvimTreeLineNr = { fg = colors.bg, bg = colors.bg },
 }
 
 for key, value in pairs(groups) do
- highlight(key, value)
+  highlight(key, value)
 end
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
