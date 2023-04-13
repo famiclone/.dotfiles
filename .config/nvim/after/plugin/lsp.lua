@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
@@ -8,6 +9,7 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
 })
+
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -50,3 +52,13 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+lspconfig.lua_ls.setup{
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
