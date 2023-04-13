@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
   use 'lewis6991/gitsigns.nvim'
   use 'alvan/vim-closetag'
-  use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
 
