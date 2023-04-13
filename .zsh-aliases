@@ -15,6 +15,7 @@ alias python=/usr/bin/python3
 # Download youtube mp4 video in best quality
 alias ydl="yt-dlp -ciw $1 --format \"bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best\" --merge-output-format mp4"
 alias ydla="yt-dlp --extract-audio --audio-format mp3 $1"
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 alias cat=bat
 alias :q=exit
