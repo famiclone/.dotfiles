@@ -28,6 +28,13 @@ local nkeymaps = {
   ["F"] = { cmd = function() vim.lsp.buf.format() end, mode = 'n', opts = opts },
   ["<leader>vrn"] = { cmd = function() vim.lsp.buf.rename() end, mode = 'n', opts = opts },
   ["<leader>vca"] = { cmd = function() vim.lsp.buf.code_action() end, mode = 'n', opts = opts },
+  -- Rest
+  ["<leader>rr"] = { cmd = "<Plug>RestNvim<CR>", mode = 'n', opts = opts },
+  ["<leader>rp"] = { cmd = "<Plug>RestNvimPreview<CR>", mode = 'n', opts = opts },
+  ["<leader>rl"] = { cmd = "<Plug>RestNvimLast<CR>", mode = 'n', opts = opts },
+  -- Telescope
+  ["<leader>pf"] = { cmd = function() require("telescope.builtin").find_files() end, mode = 'n', opts = opts },
+  ["<C-p>"] = { cmd = function() require("telescope.builtin").git_files() end, mode = 'n', opts = opts },
 }
 
 local vkeymaps = {
@@ -42,3 +49,7 @@ end
 for key, value in pairs(vkeymaps) do
   vim.keymap.set(value.mode, key, value.cmd, value.opts)
 end
+
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Previous("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next("<CR>")', { silent = true, expr = true })
