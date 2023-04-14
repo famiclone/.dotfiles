@@ -21,35 +21,33 @@ font:
 
   size: 11
 
+# monokai_pro theme
 colors:
+  # Default colors
   primary:
-    background: "#2c292d"
-    foreground: "#ececec"
+    background: '0x2D2A2E'
+    foreground: '0xfff1f3'
 
+  # Normal colors
   normal:
-    black: "#2E3436"
-    red: "#ff6188"
-    green: "#a9dc76"
-    yellow: "#ffd866"
-    blue: "#7CDCE7"
-    magenta: "#ab9df2"
-    cyan: "#78dce8"
-    white: "#D3D7CF"
-#  bright:
-#    black: "#555555"
-#    red: "#D25250"
-#    green: "#58EF8B"
-#    yellow: "#DEE493"
-#    blue: "#53BDED"
-#    magenta: "#EB64B6"
-#    cyan: "#93E1F0"
-#    white: "#EEEEEC"
-#  dim:
-#    black: "#2E3436"
-#    red: "#D25250"
-#    green: "#58EF8B"
-#    yellow: "#DEE493"
-#    blue: "#53BDED"
-#    magenta: "#EB64B6"
-#    cyan: "#93E1F0"
-#    white: "#D3D7CF"
+    black:   '0x2c2525'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+
+  # Bright colors
+  bright:
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+
+
