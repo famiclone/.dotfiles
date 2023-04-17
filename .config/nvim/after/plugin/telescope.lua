@@ -1,4 +1,7 @@
-local setup = require('telescope').setup
+local telescope = require('telescope')
+local setup = telescope.setup
+
+telescope.load_extension('projects')
 
 setup({
   defaults = {
@@ -9,3 +12,4 @@ setup({
   pickers = {
   },
 })
+

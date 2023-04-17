@@ -56,5 +56,6 @@ return require('packer').startup(function(use)
 
   use 'dhruvasagar/vim-table-mode'
   use 'nvim-tree/nvim-tree.lua'
+  use 'ahmedkhalf/project.nvim'
 end)
 
