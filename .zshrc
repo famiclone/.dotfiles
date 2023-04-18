@@ -43,3 +43,5 @@ quick_cd() {
 
 export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+
+source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
