@@ -27,6 +27,7 @@ local options = {
   updatetime = 0,
   foldmethod = "syntax",
   list = true,
+  termguicolors = true,
 }
 
 for key, value in pairs(options) do

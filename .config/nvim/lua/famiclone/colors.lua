@@ -3,17 +3,17 @@
 --})
 
 local colors = {
-  fg = '#ececec',
+  fg = '#E2E2E3',
   bg = '#282828',
   dark = '#1d1f21',
   mid = '#303030',
   dark_gray = '#212121',
-  gray = '#7b7b7b',
-  light_gray = '#3c3836',
-  info = '#83a598',
-  warning = '#ff0000',
-  danger = '#ff0000',
-  success = '#07D01D',
+  gray = '#595F6F',
+  light_gray = '#7F8490',
+  info = '#85D3F2',
+  warning = '#E7C664',
+  danger = '#FF6O77',
+  success = '#A7DF78',
 }
 
 
@@ -46,6 +46,9 @@ local groups = {
   NvimTreeNormal = { fg = colors.fg, bg = colors.bg },
   NvimTreeEndOfBuffer = { fg = colors.fg, bg = colors.bg },
   NvimTreeLineNr = { fg = colors.bg, bg = colors.bg },
+  NvimTreeFolderName = { fg = colors.fg },
+  NvimTreeOpenedFolderName = { fg = colors.info},
+  NvimTreeRootFolder = { fg = colors.gray },
 }
 
 for key, value in pairs(groups) do

@@ -17,6 +17,7 @@ alias ydl="yt-dlp -ciw $1 --format \"bestvideo+bestaudio[ext=m4a]/bestvideo+best
 alias ydla="yt-dlp --extract-audio --audio-format mp3 $1"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias v=nvim
+alias tmx=tmuxinator
 
 alias cat=bat
 alias :q=exit
