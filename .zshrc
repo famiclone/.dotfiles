@@ -8,6 +8,10 @@ source ~/.zsh-aliases
 source $ZSH/oh-my-zsh.sh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Scripts
+source ~/scripts/tmuxinator-fzf.sh
+source ~/scripts/startup.sh
+
 
 plugins=(
   zsh-autosuggestions
@@ -46,3 +50,4 @@ export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
+
