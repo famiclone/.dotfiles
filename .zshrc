@@ -1,29 +1,15 @@
-export ZSH=~/.oh-my-zsh
-ZSH_THEME="lambda"
+source ~/.zsh-aliases
 
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
-export PATH=$PATH:~/.local/share/stowsh
 
-source ~/.zsh-aliases
-source $ZSH/oh-my-zsh.sh
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Created by Zap installer
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+#plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/vim"
 
-# Scripts
-source ~/scripts/tmuxinator-fzf.sh
-source ~/scripts/startup.sh
-
-
-plugins=(
-  zsh-autosuggestions
-  git
-  vi-mode
-  history-substring-search
-)
-
-# Attach tmux on start
-# if [ "$TMUX" = "" ]; then tmux new -As0; fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #OktaAWSCLI
 if [[ -f "$HOME/.okta/bash_functions" ]]; then
@@ -37,6 +23,7 @@ fi
 [ -s "/Users/dentynok/.bun/_bun" ] && source "/Users/dentynok/.bun/_bun"
 
 #fzf directory and cd
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 quick_cd() {
   #ignored=("node_modules", ".git")
   dir=$(find . -maxdepth 2 -type d 2>/dev/null | fzf +m || pwd)
@@ -50,4 +37,4 @@ export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
-
+source $HOME/Projects/zap-lambda-theme/zap-lambda.zsh-theme

@@ -18,6 +18,7 @@ alias ydla="yt-dlp --extract-audio --audio-format mp3 $1"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias v=nvim
 alias tmx=tmuxinator
+alias la="ls -la"
 
 alias cat=bat
 alias :q=exit
