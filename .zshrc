@@ -6,7 +6,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-#plug "zap-zsh/zap-prompt"
+plug "famiclone/zap-lambda-theme"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/vim"
 
@@ -37,4 +37,3 @@ export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
-source $HOME/Projects/zap-lambda-theme/zap-lambda.zsh-theme
