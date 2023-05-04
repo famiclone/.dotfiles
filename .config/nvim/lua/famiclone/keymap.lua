@@ -36,6 +36,7 @@ local nkeymaps = {
   ["<leader>pf"] = { cmd = function() require("telescope.builtin").find_files() end, mode = 'n', opts = opts },
   ["<C-p>"] = { cmd = function() require("telescope.builtin").git_files() end, mode = 'n', opts = opts },
   ["<leader>pr"] = { cmd = function() require("telescope").extensions.projects.projects{} end, mode = 'n', opts = opts },
+  ["cp"] = { cmd = "yap<S-}>p<CR>", mode = 'n', opts = opts }
 }
 
 local vkeymaps = {
