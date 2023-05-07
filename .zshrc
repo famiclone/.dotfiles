@@ -35,7 +35,7 @@ quick_cd() {
 export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
-export PAGER="most"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
 # Added by xfiles file manager
