@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'ahmedkhalf/project.nvim'
 
   use 'sainnhe/sonokai'
+  use 'catppuccin/nvim'
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
