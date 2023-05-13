@@ -33,3 +33,7 @@ quick_cd() {
 
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec sway
+fi
