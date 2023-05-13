@@ -1,4 +1,5 @@
 source ~/.zsh-aliases
+source $HOME/Projects/zsh-lambda-theme/zsh-lambda.zsh-theme
 
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
 
@@ -6,7 +7,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "famiclone/zap-lambda-theme"
+#plug "$HOME/Projects/zap-lambda-theme"
+plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/vim"
 
@@ -19,9 +21,6 @@ if [[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]]; then
     PATH="$HOME/.okta/bin:$PATH"
 fi
 
-# bun completions
-[ -s "/Users/dentynok/.bun/_bun" ] && source "/Users/dentynok/.bun/_bun"
-
 #fzf directory and cd
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 quick_cd() {
@@ -32,15 +31,5 @@ quick_cd() {
 }
 
 
-export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"

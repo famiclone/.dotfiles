@@ -3,7 +3,6 @@ scrolling:
 
 window:
   opacity: 1
-  decorations: buttonless
   padding:
     x: 2
     y: 5
@@ -13,13 +12,13 @@ tabspaces: 2
 
 font:
   normal:
-    family: JetBrainsMono NF
+    family: JetBrainsMonoSemiBold
   bold:
-    family: JetBrainsMono NF
+    family: JetBrainsMono
   italic:
-    family: JetBrainsMono NF
+    family: JetBrainsMono
 
-  size: 11
+  size: 9
 
 # monokai_pro theme
 colors:
