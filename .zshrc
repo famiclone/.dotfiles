@@ -38,9 +38,3 @@ export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"
-# Added by xfiles file manager
-[ -f "$HOME/.local/share/xfiles/xfiles" ] && source "$HOME/.local/share/xfiles/xfiles"
