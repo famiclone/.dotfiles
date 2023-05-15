@@ -1,0 +1,19 @@
+- keyboards: ["HID Keyboard HID Keyboard"]
+
+  keymap:
+    #leftalt: leftctrl
+    #capslock: leftalt
+    #sysrq: rightmeta
+  # Specify layered configurations (much similar to fn+F keys)
+  layers:
+    # Specify the modifiers of the layer
+    - modifiers: ['capslock']
+      keymap:
+        k: up
+        h: left
+        j: down
+        l: right
+        u: pageup
+        d: pagedown
+        g: home
+        G: end
