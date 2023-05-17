@@ -38,3 +38,7 @@ export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 source /Users/dentynok/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

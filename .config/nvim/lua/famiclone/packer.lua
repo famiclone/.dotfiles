@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
     require('org-bullets').setup()
   end }
 
+  use 'mattn/emmet-vim'
+
   --use {
   --  "zbirenbaum/copilot.lua",
   --  cmd = "Copilot",
