@@ -76,6 +76,8 @@ return require('packer').startup(function(use)
   --  cmd = "Copilot",
   --  event = "InsertEnter",
   --}
+  
+  use 'simrat39/rust-tools.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
