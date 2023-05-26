@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'nvim-orgmode/orgmode'
   use 'dhruvasagar/vim-table-mode'
-  use 'nvim-tree/nvim-tree.lua'
+  --use 'nvim-tree/nvim-tree.lua'
   use 'ahmedkhalf/project.nvim'
 
   use 'sainnhe/sonokai'

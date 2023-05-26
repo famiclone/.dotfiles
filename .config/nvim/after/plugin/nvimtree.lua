@@ -1,7 +1,7 @@
 local setup = require("nvim-tree").setup
 
 setup {
-  disable_netrw = true,
+  disable_netrw = false,
   view = {
     side = 'right'
   },
