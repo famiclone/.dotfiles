@@ -35,8 +35,9 @@ local nkeymaps = {
   -- Telescope
   ["<leader>pf"] = { cmd = function() require("telescope.builtin").find_files() end, mode = 'n', opts = opts },
   ["<C-p>"] = { cmd = function() require("telescope.builtin").git_files() end, mode = 'n', opts = opts },
-  ["<leader>pr"] = { cmd = function() require("telescope").extensions.projects.projects{} end, mode = 'n', opts = opts },
-  ["yp"] = { cmd = "yap<S-}>p<CR>", mode = 'n', opts = opts }
+  ["<leader>pr"] = { cmd = function() require("telescope").extensions.projects.projects {} end, mode = 'n', opts = opts },
+  ["yp"] = { cmd = "yap<S-}>p<CR>", mode = 'n', opts = opts },
+  ["R"] = { cmd = ":!cargo run<CR>", mode = 'n', opts = opts }
 }
 
 local vkeymaps = {
@@ -55,3 +56,4 @@ end
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Previous("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next("<CR>")', { silent = true, expr = true })
+vim.cmd("autocmd FileType rust nnoremap <buffer> <F5> :!tmux split-window -h cargo run %<CR>")
