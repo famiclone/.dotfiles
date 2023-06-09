@@ -7,7 +7,6 @@ if [ -f /usr/bin/grc ]; then
  alias proftpd="grc --colour=auto proftpd"
  alias traceroute="grc --colour=auto traceroute"
 fi
-alias python=/usr/bin/python3
 
 # MacOS JavascriptCore
 #alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers/jsc

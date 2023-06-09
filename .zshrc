@@ -6,9 +6,10 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "famiclone/zap-lambda-theme"
+plug "famiclone/zsh-lambda-theme"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/vim"
+
 
 
 #OktaAWSCLI
@@ -32,7 +33,6 @@ quick_cd() {
 }
 
 
-export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
