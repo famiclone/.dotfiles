@@ -43,3 +43,5 @@ yabai -m rule --add app="^Dash$" manage=off
 yabai -m rule --add app="^CleanMyMac X$" manage=off
 yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^1Password" manage=off
+yabai -m rule --add app="^ChatGPT" manage=off
+yabai -m rule --add app="^raycraft" manage=off

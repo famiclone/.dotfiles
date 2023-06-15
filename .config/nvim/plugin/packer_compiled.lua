@@ -196,6 +196,11 @@ _G.packer_plugins = {
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-closetag",
     url = "https://github.com/alvan/vim-closetag"
   },
+  ["vim-database"] = {
+    loaded = true,
+    path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-database",
+    url = "https://github.com/dinhhuy258/vim-database"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/dentynok/.local/share/nvim/site/pack/packer/start/vim-fugitive",

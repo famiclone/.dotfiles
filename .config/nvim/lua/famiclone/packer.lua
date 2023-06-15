@@ -78,6 +78,7 @@ return require('packer').startup(function(use)
   --}
   
   use 'simrat39/rust-tools.nvim'
+  use 'dinhhuy258/vim-database'
 
   if packer_bootstrap then
     require('packer').sync()
