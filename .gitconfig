@@ -16,3 +16,5 @@
 
 [color]
   ui = true
+[commit]
+	template = /Users/dentynok/.gitmessage
