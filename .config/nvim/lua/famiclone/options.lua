@@ -36,6 +36,5 @@ end
 
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
-vim.cmd("command Bda bufdo bwipeout")
-vim.cmd("command Bd bp | bd #")
 vim.cmd("set nofoldenable")
+

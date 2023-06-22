@@ -49,6 +49,7 @@ local groups = {
   NvimTreeFolderName = { fg = colors.fg },
   NvimTreeOpenedFolderName = { fg = colors.info},
   NvimTreeRootFolder = { fg = colors.gray },
+  netrwTreeBar = { fg = colors.gray, bg = colors.bg }
 }
 
 for key, value in pairs(groups) do

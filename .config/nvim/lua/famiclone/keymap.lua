@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 local nkeymaps = {
-  ["<leader>e"] = { cmd = ":Sex<CR>", mode = 'n', opts = opts },
+  ["<leader>e"] = { cmd = ":Lexplore!<CR>", mode = 'n', opts = opts },
   ["<leader>r"] = { cmd = function() require('telescope.builtin').live_grep() end, mode = 'n', opts = opts },
   ["<leader>h"] = { cmd = function() require('telescope.builtin').help_tags() end, mode = 'n', opts = opts },
   -- Disable arrow keys
@@ -53,6 +53,8 @@ for key, value in pairs(vkeymaps) do
   vim.keymap.set(value.mode, key, value.cmd, value.opts)
 end
 
+vim.cmd("command Bda bufdo bwipeout")
+vim.cmd("command Bd bp | bd #")
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Previous("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next("<CR>")', { silent = true, expr = true })
