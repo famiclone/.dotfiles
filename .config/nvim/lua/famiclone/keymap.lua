@@ -57,6 +57,7 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Previous("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next("<CR>")', { silent = true, expr = true })
 vim.cmd("autocmd FileType rust nnoremap <buffer> <F5> :!tmux split-window -h cargo run %<CR>")
+vim.cmd("autocmd FileType javascript nnoremap <buffer> <F5> :!tmux split-window -h npm start%<CR>")
 vim.cmd("autocmd FileType typescript nnoremap <buffer> <F5> :!tmux split-window -h npm start%<CR>")
 vim.cmd(
   "autocmd FileType python nnoremap <buffer> <F5> :!tmux split-window -h source ./venv/bin/activate && cd src && python3 main.py<CR>"
