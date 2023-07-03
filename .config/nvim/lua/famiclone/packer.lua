@@ -65,10 +65,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  use { 'akinsho/org-bullets.nvim', config = function()
-    require('org-bullets').setup()
-  end }
-
   use 'mattn/emmet-vim'
 
   --use {
@@ -79,6 +75,7 @@ return require('packer').startup(function(use)
   
   use 'simrat39/rust-tools.nvim'
   --use 'dinhhuy258/vim-database'
+  use 'vimwiki/vimwiki'
 
   if packer_bootstrap then
     require('packer').sync()
