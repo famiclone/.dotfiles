@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 local nkeymaps = {
-  ["<leader>e"] = { cmd = ":Lexplore!<CR>", mode = 'n', opts = opts },
+  ["<leader>e"] = { cmd = ":Lex!<CR>", mode = 'n', opts = opts },
   ["<leader>r"] = { cmd = function() require('telescope.builtin').live_grep() end, mode = 'n', opts = opts },
   ["<leader>h"] = { cmd = function() require('telescope.builtin').help_tags() end, mode = 'n', opts = opts },
   -- Disable arrow keys

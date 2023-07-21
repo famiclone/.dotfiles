@@ -3,7 +3,8 @@ local opts = {
   netrw_banner = 0,
   netrw_liststyle = 3,
   netrw_browse_split = 4,
-  netrw_altv = 1
+  netrw_altv = 1,
+  netrw_keepdir = 0
 }
 
 for key, value in pairs(opts) do
