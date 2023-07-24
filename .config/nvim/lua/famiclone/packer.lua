@@ -24,9 +24,9 @@ return require('packer').startup(function(use)
   --use 'nvim-orgmode/orgmode'
   use 'dhruvasagar/vim-table-mode'
   --use 'nvim-tree/nvim-tree.lua'
-  use 'ahmedkhalf/project.nvim'
+ --use 'ahmedkhalf/project.nvim'
 
-  use 'sainnhe/sonokai'
+  --use 'sainnhe/sonokai'
   use 'catppuccin/nvim'
 
   use {
@@ -75,7 +75,7 @@ return require('packer').startup(function(use)
   
   use 'simrat39/rust-tools.nvim'
   --use 'dinhhuy258/vim-database'
-  use 'vimwiki/vimwiki'
+  --use 'vimwiki/vimwiki'
 
   if packer_bootstrap then
     require('packer').sync()
