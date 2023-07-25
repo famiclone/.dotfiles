@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
   --use 'nvim-tree/nvim-tree.lua'
  --use 'ahmedkhalf/project.nvim'
 
-  --use 'sainnhe/sonokai'
+  use 'sainnhe/sonokai'
   use 'catppuccin/nvim'
 
   use {
