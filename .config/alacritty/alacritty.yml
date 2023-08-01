@@ -13,13 +13,13 @@ tabspaces: 2
 
 font:
   normal:
-    family: JetBrainsMono NF
+    family: Fantasque Sans Mono
   bold:
     family: JetBrainsMono NF
   italic:
     family: JetBrainsMono NF
 
-  size: 11
+  size: 13
 
 # monokai_pro theme
 colors:
