@@ -1,3 +1,3 @@
-local setup = require("project_nvim").setup
+--local setup = require("project_nvim").setup
 
-setup({})
+--setup({})
