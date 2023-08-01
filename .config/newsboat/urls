@@ -1,5 +1,8 @@
-# Tech
-"query:* Reddit:( rssurl =~ \"reddit\" and unread == \"yes\" )"
+"query:Unread Articles:unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\""
+"query:Unread Articles (1 year old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:365"
+"query:Unread Articles (1 month old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:31"
+"query:Unread Articles (1 week old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:7"
+"query:Unread Articles (favourite):unread = \"yes\" and tags # \"favourite\""
 
 # Blogs
 http://blog.mozilla.com/nnethercote/feed/ "~Nicholas Nethercote, Mozilla" blogs
@@ -21,3 +24,4 @@ https://webkit.org/blog/feed/ "~WebKit" blogs browser
 https://blog.nodejs.org/feed/ "~Node.js" blogs javascript 
 https://techblog.netflix.com/feeds "~Netflix techblog" blogs tech
 https://www.taniarascia.com/rss.xml "~Tania Rascia" blogs javascript
+http://29a.ch/feed.atom "~29a.ch" programming
