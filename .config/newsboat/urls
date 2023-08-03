@@ -16,13 +16,15 @@ http://blog.mozilla.com/nnethercote/feed/ "~Nicholas Nethercote, Mozilla" blogs
 https://lobste.rs/rss
 
 # Programming
-https://www.2ality.com "~2ality" blogs javascript
-https://webkit.org/blog/feed/ "~WebKit" blogs browser
-https://blog.nodejs.org/feed/ "~Node.js" blogs javascript 
-https://techblog.netflix.com/feeds "~Netflix techblog" blogs tech
+https://www.2ality.com "~2ality" javascript
+https://webkit.org/blog/feed/ "~WebKit" browser
+https://blog.nodejs.org/feed/ "~Node.js" javascript 
+https://techblog.netflix.com/feeds "~Netflix techblog" tech
 https://www.taniarascia.com/rss.xml "~Tania Rascia" blogs javascript
 http://29a.ch/feed.atom "~29a.ch" programming
-http://zeuxcg.org/feed programming
+http://zeuxcg.org/feed "~zeuxcg" programming
+https://news.ycombinator.com/rss "~Hacker News" tech
+https://github.blog/feed "~GitHub" "!hidden" tech 
 
 # Query Aggregators
 "query:Programming :tags # \"programming\""

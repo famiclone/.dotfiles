@@ -1,22 +1,10 @@
+# System
 auto-reload yes
 reload-time 120
 reload-threads 4
-
-# -- display -------------------------------------------------------------------
-
-show-read-feeds no
-feed-sort-order unreadarticlecount-asc
-color info default default reverse
-color listnormal_unread yellow default
-color listfocus blue default reverse bold
-color listfocus_unread blue default reverse bold
-include ~/.newsboat/dark
-
-
-
-# -- navigation ----------------------------------------------------------------
-
 browser "open -g -a 'Safari' %u"
+
+# Navigation 
 goto-next-feed no
 bind-key j down
 bind-key k up
@@ -37,5 +25,16 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
+# Appearance
+show-read-feeds no
+feed-sort-order unreadarticlecount-asc
+color info default default reverse
+color listnormal_unread yellow default
+color listfocus blue default reverse bold
+color listfocus_unread blue default reverse bold
 feedlist-format     "%11u %t"
 articlelist-format  "%4i %f %D  %?T?|%-16T|  ?%t"
+include ~/.newsboat/dark
+
+# Clean up
+keep-articles-days 14
