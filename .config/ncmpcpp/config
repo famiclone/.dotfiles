@@ -1,0 +1,9 @@
+# Directories
+ncmpcpp_directory  = ~/.ncmpcpp
+lyrics_directory  = ~/.ncmpcpp/lyricso
+
+# mpd
+mpd_port = "6602"
+mpd_connection_timeout = 5
+mpd_crossfade_time = 5
+mpd_music_dir = "~/Music"

@@ -5,7 +5,7 @@
 cmd open &{{
     case $(file --mime-type -Lb $f) in
         audio/*)
-          lf -remote "send echo $f";;
+          lf -remote "send $id %afplay '$fx'";;
         text/*)
           lf -remote "send $id \$$EDITOR \$fx";;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
