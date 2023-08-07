@@ -30,3 +30,8 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+
+# mpd
+.mpd/database
+.mpd/log
+.mpd/state
