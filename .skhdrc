@@ -60,4 +60,3 @@ shift + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && sud
 
 
 shift + alt - s: yabai -m window [<source_window_sel>] --stack <target_window_sel>
-

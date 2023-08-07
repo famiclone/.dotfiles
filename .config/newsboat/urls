@@ -16,15 +16,51 @@ http://blog.mozilla.com/nnethercote/feed/ "~Nicholas Nethercote, Mozilla" blogs
 https://lobste.rs/rss
 
 # Programming
-https://www.2ality.com "~2ality" javascript
-https://webkit.org/blog/feed/ "~WebKit" browser
-https://blog.nodejs.org/feed/ "~Node.js" javascript 
-https://techblog.netflix.com/feeds "~Netflix techblog" tech
+#https://www.2ality.com "~2ality" javascript
+#https://webkit.org/blog/feed/ "~WebKit" browser
+#https://blog.nodejs.org/feed/ "~Node.js" javascript 
+#https://techblog.netflix.com/feeds "~Netflix techblog" tech
 https://www.taniarascia.com/rss.xml "~Tania Rascia" blogs javascript
 http://29a.ch/feed.atom "~29a.ch" programming
 http://zeuxcg.org/feed "~zeuxcg" programming
 https://news.ycombinator.com/rss "~Hacker News" tech
 https://github.blog/feed "~GitHub" "!hidden" tech 
 
+# Youtube
+# https://www.youtube.com/feeds/videos.xml?playlist_id=
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjdHbo8_vh3rxQ-875XGkvw "~3DSage"  programming gamedev youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGuuPSmUAmAuOvWFjfPHFCQ "~All Things Lost" lostmedia youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=iUCU3oAyhHDXjgbxazqOEG2UA "~blameitonjorge" lostmedia youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0M0rxSz3IF0CsSour1iWmw "~Cinemassacre" gaming youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC20M3T-H-Pv0FPOEfeQJtNQ "~Dima Maleev" tech news youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC15BJjhPr4d5gTClhmC4HRw "~Elliot Coll" gaming youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA "~jdh" programming gamedev youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdJdEguB1F1CiYe7OEi3SBg "~JonTronShow" youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgMWaIRDaAdj0PUUH9HPtcA "~KORO" youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSl4Y5mQzWINY6ZWh04Ws6w "~LSuperSonicQ" lostmedia youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith" linux youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCpFFItkfZz1qz5PpHpqzYBw "~Nexpo" mysteries youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMX31RavkfUHJvw03RbUZnA "~Nick Crowley" mysteries youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOuddH5GyBXp-_tv_ASdp_A "~Nick Robinson" youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTWbP-2W-_6mzWLg2oZmT7Q "~RetroGamingNow" mysteries youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaGOgwGKnDVOKY0DrFsBAiA "~ScareTheater" youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtUVqO8NgGWqKjH2pWbA1lw "~sourcebrew" youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd1gYKuDp3g4jt14pRu0KYQ "~St1ka" youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2XSkyalaYDtTDV6gOwxiqA "~TheInternetInvestigator" mysteries youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnCmb1vpv90EeSX5g7K4UYQ "~The Librarian" mysteries youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCefAbzsWZE4uXU-mqQMrr4Q "~The Retro Future" gaming youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJ6z_yj_dDNrhn-c8ZyKV4g "~TheGamerFromMars" gaming youtube "!hidden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~ThePrimeagen" programming vim youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCilouT5irlCNn2imcCDhhJQ "~ThorHighHeels" gaming youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA "~TJ DeVries" programming vim youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg "~TsodingDaily" programming youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg "~Wolfgang's Channel" programming hardware youtube
+
 # Query Aggregators
-"query:Programming :tags # \"programming\""
+"query:#programming :tags # \"programming\""
+"query:#youtube :tags # \"youtube\""
+"query:#lostmedia:tags # \"lostmedia\""
+"query:#gaming:tags # \"gaming\""
+"query:#tech:tags # \"tech\""
+"query:#news:tags # \"news\""
+"query:#vim:tags # \"vim\""

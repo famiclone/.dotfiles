@@ -56,10 +56,6 @@ def_key "N"
     previous_found_item
 
 # Disable keys
-def_key "right"
-    dummy
-def_key "left"
-    dummy
 def_key "+"
     dummy
 def_key "-"
