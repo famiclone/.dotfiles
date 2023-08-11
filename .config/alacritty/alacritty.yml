@@ -15,9 +15,9 @@ font:
   normal:
     family: Fantasque Sans Mono
   bold:
-    family: JetBrainsMono NF
+    family: Fantasque Sans Mono
   italic:
-    family: JetBrainsMono NF
+    family: Fantasque Sans Mono
 
   size: 13
 
