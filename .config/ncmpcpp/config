@@ -7,3 +7,30 @@ mpd_port = "6602"
 mpd_connection_timeout = 5
 mpd_crossfade_time = 5
 mpd_music_dir = "/Volumes/storage/Music"
+
+startup_screen = playlist
+screen_switcher_mode = playlist, visualizer
+startup_slave_screen = visualizer
+
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = 30
+visualizer_in_stereo = "no"
+visualizer_fps = 30
+visualizer_color ="white"
+visualizer_type = "spectrum"
+# visualizer_look = "  "
+visualizer_look = "▋▋"
+visualizer_spectrum_smooth_look = yes
+
+progressbar_look = "▃▃▃"
+progressbar_color = "black"
+progressbar_elapsed_color = "green"
+statusbar_color = "5"
+
+now_playing_suffix = "$8$/b"
+
+header_visibility = no
+statusbar_visibility = yes
+autocenter_mode = yes
+centered_cursor = "yes"
