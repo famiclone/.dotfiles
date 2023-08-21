@@ -34,7 +34,6 @@ color listfocus blue default reverse bold
 color listfocus_unread blue default reverse bold
 feedlist-format     "%11u %t"
 articlelist-format  "%4i %f %D  %?T?|%-16T|  ?%t"
-include ~/.newsboat/dark
 
 # Clean up
 keep-articles-days 14

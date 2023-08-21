@@ -64,3 +64,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg "~W
 "query:#tech:tags # \"tech\""
 "query:#news:tags # \"news\""
 "query:#vim:tags # \"vim\""
+"query:#monitoring:tags # \"monitoring\""
