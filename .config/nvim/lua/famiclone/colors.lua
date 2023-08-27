@@ -1,7 +1,3 @@
---require('rose-pine').setup({
---    disable_background = true
---})
-
 local colors = {
   fg = '#E2E2E3',
   bg = '#282828',
@@ -19,7 +15,7 @@ local colors = {
 
 vim.cmd("hi clear")
 vim.cmd("syntax reset")
-vim.cmd("colorscheme sonokai")
+--vim.cmd("colorscheme sonokai")
 vim.o.background = "dark"
 
 local function highlight(group, table)
@@ -58,3 +54,13 @@ end
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+-- [[ Highlight on yank ]]
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
