@@ -10,8 +10,6 @@ plug "famiclone/zsh-lambda-theme"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/vim"
 
-
-
 #OktaAWSCLI
 if [[ -f "$HOME/.okta/bash_functions" ]]; then
     . "$HOME/.okta/bash_functions"
@@ -42,5 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH=/Users/dentynok/.meteor:$PATH
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib

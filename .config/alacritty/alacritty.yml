@@ -2,6 +2,7 @@ scrolling:
   history: 10000
 
 window:
+  option_as_alt: Both
   opacity: 1
   decorations: buttonless
   padding:
@@ -13,11 +14,11 @@ tabspaces: 2
 
 font:
   normal:
-    family: Fantasque Sans Mono
+    family: FantasqueSansM Nerd Font
   bold:
-    family: Fantasque Sans Mono
+    family: FantasqueSansM Nerd Font
   italic:
-    family: Fantasque Sans Mono
+    family: FantasqueSansM Nerd Font
 
   size: 13
 
