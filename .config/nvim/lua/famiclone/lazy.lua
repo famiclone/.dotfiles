@@ -149,5 +149,10 @@ require('lazy').setup({
   },
   {
     'github/copilot.vim'
-  }
+  },
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 }, {})
