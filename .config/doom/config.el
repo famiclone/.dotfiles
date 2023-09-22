@@ -32,11 +32,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq
+ doom-theme 'doom-monokai-pro
+ projectile-project-search-path '("~/Projects")
+ display-line-numbers-type `relative
+ prettier-js-args '("--double-quote")
+ )
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type `relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -72,5 +76,36 @@
 ;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
 ;; etc).
 ;;
+;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(xterm-mouse-mode 1) ;; Enable mouse
+(add-hook 'find-file-hook 'display-line-numbers-mode) ;; Display line numbers always
+
+(map! :map evil-normal-state-map
+      "<up>" #'previous-buffer
+      "<down>" #'next-buffer
+      "<mouse-4>" #'evil-scroll-line-up
+      "<mouse-5>" #'evil-scroll-line-down
+      )
+
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t
+        lsp-ui-doc-use-webkit nil
+        lsp-ui-doc-delay 0.5
+        lsp-ui-doc-include-signature t
+        lsp-ui-doc-position 'at-point
+        )
+  (setq lsp-ui-sideline-enable t
+        lsp-ui-sideline-show-code-actions t
+        lsp-ui-sideline-show-diagnostics t)
+  )
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t))
+ )
+
+(setq org-babel-python-command "python3")
+(setq fancy-splash-image nil)

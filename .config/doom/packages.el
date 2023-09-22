@@ -53,3 +53,13 @@
 (package! prettier-js)
 (package! copilot
   :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/Library/Mobile Documents/com~apple~CloudDocs/notes")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+
+         ("C-c n i" . org-roam-node-insert))
+
+  )

@@ -26,3 +26,4 @@ alias :q=exit
 #alias ls="exa --long --git"
 
 alias nms="find ~/Projects -name "node_modules" -type d -prune -print | xargs du -chs"
+#alias emacs="emacsclient -c -a 'emacs'"
