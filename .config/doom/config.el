@@ -109,3 +109,34 @@
 
 (setq org-babel-python-command "python3")
 (setq fancy-splash-image nil)
+
+(setq ns-auto-hide-menu-bar t)
+(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+
+(set-frame-font "FantasqueSansM Nerd Font" nil t)
+
+(custom-set-faces
+'(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+'(org-level-2 ((t (:inherit outline-1 :height 1.4))))
+'(org-level-3 ((t (:inherit outline-1 :height 1.3))))
+'(org-level-2 ((t (:inherit outline-1 :height 1.2))))
+ )
+
+(defun open-my-org-file ()
+  "Open my special org file."
+  (interactive)
+  (find-file "~/Library/Mobile Documents/com~apple~CloudDocs/notes/index.org"))
+
+(global-set-key (kbd "C-c o") 'open-my-org-file)
+
+(use-package org-roam
+  :custom
+  (org-roam-directory "~/Library/Mobile Documents/com~apple~CloudDocs/notes/")
+  :bind (
+         ("C-c n l" . org-roam)
+         ("C-c n f" . org-roam-find-file)
+         ("C-c n g" . org-roam-graph)
+         )
+  :config
+  (org-roam-db-autosync-enable)
+  )

@@ -194,3 +194,6 @@ r      company           ; the ultimate code completion backend
        :config
        ;;literate
        (default +bindings +smartparens))
+
+(add-to-list 'default-frame-alist '(undecorated . t))
+(setq visible-bell nil)
