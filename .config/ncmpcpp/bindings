@@ -1,6 +1,7 @@
 # ncmpcpp bindings
 # Docs in /usr/share/doc/ncmpcpp
 
+
 def_key "h"
     previous_column
 def_key "l"
@@ -9,6 +10,10 @@ def_key "j"
     scroll_down
 def_key "k"
     scroll_up
+def_key "K"
+    move_selected_items_up
+def_key "J"
+    move_selected_items_down
 
 def_key "u"
     page_up
