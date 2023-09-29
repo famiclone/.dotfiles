@@ -6,6 +6,7 @@ import re
 import time
 import socket
 
+
 def text_to_dict(text):
     lines = text.strip().split("\n") 
     result_dict = {} 
@@ -86,7 +87,9 @@ client = MPCClient()
 mpd = MPDClient(6602)
 
 state = {
-    "current_song": mpd.get_current_song(),
+    "current_song": {
+        "name": client.get_current_song()
+    },
     "current_playlist_index": 0,
     "current_status": None,
     "current_element": 0
@@ -105,7 +108,7 @@ def render_list(stdscr, items):
 def render_status_bar(stdscr, y, width):
     for x in range(width):
         stdscr.addch(y, x, curses.ACS_HLINE, curses.color_pair(1))
-    stdscr.addstr(y + 1, 0, str(state["current_song"]["Title"]))
+    stdscr.addstr(y + 1, 0, str(state["current_song"]["name"]))
     stdscr.addstr(y + 1, width - 5, str(client.get_track_progress(0)))
 
 
