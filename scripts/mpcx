@@ -4,11 +4,44 @@ import curses
 import subprocess
 import re
 import time
+import socket
+
+def text_to_dict(text):
+    lines = text.strip().split("\n") 
+    result_dict = {} 
+
+    for line in lines:
+        try:
+            key, value = line.split(": ", 1) 
+            result_dict[key] = value
+        except ValueError:
+            pass
+
+    return result_dict
 
 
 def save_state():
     pass
 
+class MPDClient:
+    def __init__(self, port = 6600):
+        self.client = self.connect("localhost", port)
+
+    def connect(self, host, port):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((host, port))
+        s.recv(1024)  # Welcome mpd message
+        return s
+
+    def close(self):
+        self.client.close()
+
+    def send(self, cmd):
+        self.client.sendall((cmd + "\n").encode("utf-8"))
+        return self.client.recv(4096).decode("utf-8")
+
+    def get_current_song(self):
+        return text_to_dict(self.send("currentsong"))
 
 class MPCClient:
     pass
@@ -50,30 +83,35 @@ class MPCClient:
 
 
 client = MPCClient()
+mpd = MPDClient(6602)
 
 state = {
-    "current_song": {
-        "name": client.get_current_song(),
-    },
+    "current_song": mpd.get_current_song(),
     "current_playlist_index": 0,
-    "current_status": None
+    "current_status": None,
+    "current_element": 0
 }
 
 
 def render_list(stdscr, items):
     for i, item in enumerate(items):
-        stdscr.addstr(i + 2, 0, item)
+        if i == state["current_element"]:
+            pass
+            stdscr.addstr(i, 0, item, curses.A_REVERSE)
+        else:
+            stdscr.addstr(i, 0, item)
 
 
 def render_status_bar(stdscr, y, width):
-    stdscr.addstr(y, 0, str(state["current_song"]["name"]))
-    stdscr.addstr(y, width - 5, str(client.get_track_progress(0)))
-
     for x in range(width):
-        stdscr.addch(y + 2, x, curses.ACS_HLINE, curses.color_pair(1))
+        stdscr.addch(y, x, curses.ACS_HLINE, curses.color_pair(1))
+    stdscr.addstr(y + 1, 0, str(state["current_song"]["Title"]))
+    stdscr.addstr(y + 1, width - 5, str(client.get_track_progress(0)))
+
 
 
 def main(stdscr):
+    curses.curs_set(0)
     stdscr.clear()
 
     while True:
@@ -83,7 +121,7 @@ def main(stdscr):
 
         render_list(stdscr, client.get_current_playlist())
 
-        render_status_bar(stdscr, 1, width)
+        render_status_bar(stdscr, height - 5, width)
 
 
         key = stdscr.getch()
@@ -98,6 +136,21 @@ def main(stdscr):
             pass
         if key == 51:  # 3
             pass
+        # j
+        if key == 106 and state["current_element"] < len(client.get_current_playlist()) - 1:
+            state["current_element"] += 1
+        # k
+        if key == 107 and state["current_element"] > 0:
+            state["current_element"] -= 1
+        # G
+        if key == 71:
+            state["current_element"] = len(client.get_current_playlist()) - 2
+        # return
+        if key == 10:
+            client.exec("mpc play " + str(state["current_element"] + 1))
+            state["current_song"]["name"] = client.get_current_song()
+            stdscr.refresh()
+
         if key == 112:  # p
             if (client.get_current_status() == "playing"):
                 client.exec("mpc pause")

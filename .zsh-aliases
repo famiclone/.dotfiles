@@ -20,6 +20,7 @@ alias tmx=tmuxinator
 alias la="ls -la"
 alias wget="wget -c"
 alias news="newsboat"
+alias mpcx="~/.dotfiles/scripts/mpcx"
 
 alias cat=bat
 alias :q=exit
