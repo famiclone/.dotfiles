@@ -17,6 +17,14 @@
     ~/.gitmessage: .gitmessage
     ~/.macos: .macos
     ~/.mpd: .mpd
+    ~/.config/nvim/: .config/nvim/
+    ~/.config/alacritty/: .config/alacritty/
+    ~/.config/bat/: .config/bat/
+    ~/.config/htop/: .config/htop/
+    ~/.config/karabiner/: .config/karabiner/
+    ~/.config/lf/: .config/lf/
+    ~/.config/ncmpcpp/: .config/ncmpcpp/
+    ~/.config/newsboat/: .config/newsboat/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
