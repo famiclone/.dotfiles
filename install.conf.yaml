@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc
+    ~/.zshrc: .zshrc
+    ~/.zsh-aliases: .zsh-aliases
+    ~/.zsh-keymaps: .zsh-keymaps
+    ~/.yabairc: .yabairc
+    ~/.skhdrc: .skhdrc
+    ~/.curlrc: .curlrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitmessage: .gitmessage
+    ~/.macos: .macos
+    ~/.mpd: .mpd
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
