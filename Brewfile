@@ -12,8 +12,6 @@ brew "automake"
 brew "bat"
 brew "icu4c"
 brew "boost"
-brew "boost@1.76"
-brew "freetype"
 brew "cc65"
 brew "ccls"
 brew "cmake"
@@ -27,7 +25,6 @@ brew "ncurses"
 brew "htop"
 brew "lf"
 brew "libtool"
-brew "mkvtoolnix"
 brew "mpc"
 brew "mpd", restart_service: true
 brew "mpdscribble", restart_service: true
@@ -41,6 +38,7 @@ brew "tmux"
 brew "youtube-dl"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew "mas"
 
 # Casks
 cask "alacritty"
@@ -48,3 +46,10 @@ cask "alfred"
 cask "font-fantasque-sans-mono"
 cask "google-chrome"
 cask "stats"
+cask "karabiner-elements"
+
+# AppStore
+mas "PopClip", id: 445189367
+mas "Hidden Bar", id: 1452453066 
+mas "Wipr", id: 1320666476
+mas "Vimari ", id: 1480933944
