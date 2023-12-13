@@ -1,11 +1,16 @@
 [alias]
   st   = status -s
-  cm   = commit
+  cm   = commit -m
   type = cat-file -t
   dump = cat-file -d
   logg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   n    = log --reverse --pretty=%H main | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
   p    = checkout HEAD^1
+  sw = switch
+  swc = switch -c
+  b = branch
+  bd = branch -D
+  f = fetch
 
 [user]
   email = denys@famiclone.dev
@@ -17,4 +22,4 @@
 [color]
   ui = true
 [commit]
-	template = /Users/dentynok/.gitmessage
+  template = /Users/dentynok/.gitmessage
