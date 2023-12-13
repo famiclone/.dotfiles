@@ -8,7 +8,7 @@
   p    = checkout HEAD^1
   sw = switch
   swc = switch -c
-  b = branch
+  b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
   bd = branch -D
   f = fetch
 
