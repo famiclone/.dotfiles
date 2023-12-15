@@ -119,7 +119,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',       opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -158,4 +158,6 @@ require('lazy').setup({
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+  { "leafOfTree/vim-svelte-plugin" },
+  { "nvim-tree/nvim-web-devicons"}
 }, {})
