@@ -25,6 +25,7 @@ http://29a.ch/feed.atom "~29a.ch" programming
 http://zeuxcg.org/feed "~zeuxcg" programming
 https://news.ycombinator.com/rss "~Hacker News" tech
 https://github.blog/feed "~GitHub" "!hidden" tech 
+https://www.integralist.co.uk/posts/ "~INTEGRALIST" "!hidden" tech
 
 # Youtube
 # https://www.youtube.com/feeds/videos.xml?playlist_id=

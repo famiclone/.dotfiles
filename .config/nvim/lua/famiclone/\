@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
+
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -26,12 +27,13 @@ lsp.setup_nvim_cmp({
 
 lsp.set_preferences({
   suggest_lsp_servers = false,
-  sign_icons = {
-    error = '',
-    warn = '',
-    hint = '',
-    info = ''
-  }
+})
+
+lsp.set_sign_icons({
+  error = '',
+  warn = '',
+  hint = '',
+  info = ''
 })
 
 lsp.setup()
