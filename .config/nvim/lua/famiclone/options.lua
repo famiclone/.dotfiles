@@ -12,7 +12,7 @@ local options = {
   numberwidth = 4,
   relativenumber = true,
   scrolloff = 8,
-  showtabline = 2,
+  showtabline = 1,
   sidescrolloff = 8,
   smartcase = true,
   smartindent = true,
@@ -40,7 +40,6 @@ vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 vim.cmd("set nofoldenable")
 vim.wo.signcolumn = 'yes'
-
 
 vim.cmd([[
 autocmd BufEnter term://* startinsert
