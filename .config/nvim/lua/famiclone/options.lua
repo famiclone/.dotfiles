@@ -58,3 +58,9 @@ function! Check_job_status(job_id)
     endif
 endfunction
 ]])
+
+vim.cmd([[
+    aunmenu PopUp.How-to\ disable\ mouse
+    aunmenu PopUp.-1-
+]])
+
