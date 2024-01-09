@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule ".config/nvim/colors/kyiv-sunrise.nvim"]
+	path = .config/nvim/colors/kyiv-sunrise.nvim
+	url = git@github.com:famiclone/kyiv-sunrise.nvim.git

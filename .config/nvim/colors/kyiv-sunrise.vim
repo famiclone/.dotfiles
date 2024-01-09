@@ -1,1 +1,1 @@
-/Users/famiclone/.vim/colors/kyiv-sunrise.vim
+kyiv-sunrise.nvim/kyiv-sunrise.vim
