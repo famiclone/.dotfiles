@@ -1,0 +1,50 @@
+blinking = "on"
+tabspaces = 2
+
+[colors.bright]
+black = "0x322A25"
+blue = "0xf38d70"
+cyan = "0x85dacc"
+green = "0xadda78"
+magenta = "0xa8a9eb"
+red = "0xfd6883"
+white = "0xfff1f3"
+yellow = "0xf9cc6c"
+
+[colors.normal]
+black = "0x322A25"
+blue = "0xabcdde"
+cyan = "0xabcdde"
+green = "0x56A286"
+magenta = "0xedd09f"
+red = "0xff1100"
+white = "0xebedea"
+yellow = "0xffce3b"
+
+[colors.primary]
+background = "0x303030"
+foreground = "0xebedea"
+
+[font]
+size = 13
+
+[font.bold]
+family = "FantasqueSansM Nerd Font"
+
+[font.italic]
+family = "FantasqueSansM Nerd Font"
+
+[font.normal]
+family = "FantasqueSansM Nerd Font"
+
+[scrolling]
+history = 10000
+
+[window]
+decorations = "buttonless"
+opacity = 1
+option_as_alt = "Both"
+
+[window.padding]
+x = 2
+y = 5
