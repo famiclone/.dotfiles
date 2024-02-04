@@ -33,12 +33,15 @@ yabai -m rule --add app="^Safari$" space=^1
 yabai -m rule --add app="^Chrome$" space=^1
 yabai -m rule --add app="^Alacritty$" space=^9
 yabai -m rule --add app="^Slack$" space=^3
+yabai -m rule --add app="^Spotify$" space=^4
 
 # Floating
 yabai -m rule --add app="^IINA$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Dash$" manage=off
+yabai -m rule --add app="^CleanMyMac X$" manage=off
 yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^1Password" manage=off
 yabai -m rule --add app="^ChatGPT" manage=off
-yabai -m rule --add app="^System Settings" manage=off
+yabai -m rule --add app="^raycraft" manage=off

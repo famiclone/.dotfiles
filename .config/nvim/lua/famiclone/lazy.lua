@@ -101,7 +101,7 @@ require('lazy').setup({
     main = "ibl",
     opts = {
       indent = {
-        char = { "│" }
+        char = {"│"}
       }
     }
   },
@@ -147,5 +147,5 @@ require('lazy').setup({
   --   dependencies = { "nvim-lua/plenary.nvim" },
   -- },
   { "leafOfTree/vim-svelte-plugin" },
-  { "nvim-tree/nvim-web-devicons" }
+  { "nvim-tree/nvim-web-devicons"}
 }, {})

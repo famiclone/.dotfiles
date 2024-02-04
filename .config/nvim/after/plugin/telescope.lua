@@ -2,8 +2,8 @@ require('telescope').setup {
   defaults = {
     mappings = {
       i = {
-        ['<C-d>'] = false,
         ['<C-u>'] = false,
+        ['<C-d>'] = false,
       },
     },
   },
