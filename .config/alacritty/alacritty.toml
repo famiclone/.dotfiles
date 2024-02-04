@@ -1,6 +1,3 @@
-blinking = "on"
-tabspaces = 2
-
 [colors.bright]
 black = "0x322A25"
 blue = "0xf38d70"
