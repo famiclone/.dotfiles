@@ -1,3 +1,4 @@
+
 local path = "$HOME/Library/Mobile Documents/com~apple~CloudDocs/garden"
 
 local function save_folds()
@@ -27,7 +28,7 @@ local function garden_enable()
     execute "edit" arg
   endfunction
 
-  nnoremap <buffer> <key> :call <SID>MDGoToSection()<CR>
+  nnoremap <buffer> <ge> :call <SID>MDGoToSection()<CR>
   ]])
 end
 

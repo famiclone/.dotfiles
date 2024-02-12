@@ -1,7 +1,7 @@
 local lualine = require('lualine')
 
 local function shortMode()
-  return string.upper(vim.api.nvim_get_mode().mode)
+  return 
 end
 
 lualine.setup {
@@ -11,16 +11,7 @@ lualine.setup {
   },
   sections = {
     lualine_a = {shortMode},
-    lualine_b = {
-      'diagnostics',
-
-      sources = {'nvim_lsp', 'nvim_diagnostic'},
-      sections = {'error', 'warn', 'info', 'hint'},
-      symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},
-      colored = true,           -- Displays diagnostics status in color if set to true.
-      update_in_insert = false, -- Update diagnostics in insert mode.
-      always_visible = false,
-    },
+    lualine_b = {},
     lualine_c = {'filename'},
     lualine_x = {'filetype'},
     lualine_y = {'branch'},
