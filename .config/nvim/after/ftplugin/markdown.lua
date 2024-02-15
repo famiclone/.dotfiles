@@ -59,6 +59,20 @@ vim.api.nvim_create_autocmd(
   }
 )
 
+-- Open double bracket [[ show autocomplete menu with all files in the current directory
+vim.api.nvim_create_autocmd(
+  { "InsertEnter" },
+  {
+    group = vim.api.nvim_create_augroup('wikiLinkComplete', { clear = true }),
+    pattern = { "*.md" },
+    callback = function()
+      if vim.fn.getline('.'):match('%[%[') then
+        vim.fn.complete(1, vim.fn.glob('./*'))
+      end
+    end
+  }
+)
+
 local function go_to_def()
   local line = vim.fn.getline('.')
   local link = string.match(line, '%[%[(.*)%]%]')
