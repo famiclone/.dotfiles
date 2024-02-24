@@ -18,6 +18,7 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
+  { "ellisonleao/gruvbox.nvim", priority = 1000,  config = true, opts = {} },
 
   {
     -- LSP Configuration & Plugins
@@ -87,13 +88,13 @@ require('lazy').setup({
     main = "ibl",
     opts = {
       indent = {
-        char = {"│"}
+        char = { "│" }
       }
     }
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',       opts = {} },
+  { 'numToStr/Comment.nvim',    opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -133,5 +134,5 @@ require('lazy').setup({
   --   dependencies = { "nvim-lua/plenary.nvim" },
   -- },
   { "leafOfTree/vim-svelte-plugin" },
-  { "nvim-tree/nvim-web-devicons"}
+  { "nvim-tree/nvim-web-devicons" }
 }, {})

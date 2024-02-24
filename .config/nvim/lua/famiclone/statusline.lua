@@ -1,3 +1,5 @@
+local git_branch = "no git"
+
 local function exec_cmd(cmd)
     local h = io.popen(cmd)
     local res = h:read("*a")
@@ -7,10 +9,15 @@ local function exec_cmd(cmd)
 end
 
 local function get_git_branch()
-    local is_git_dir = exec_cmd("echo $(git rev-parse --is-inside-work-tree)")
+    local is_git_dir = exec_cmd("git rev-parse --is-inside-work-tree 2>/dev/null")
 
-    if is_git_dir:match("true") then
-        return string.sub(exec_cmd("git branch --show-current"), 1, -2);
+    -- Обрізаємо новий рядок з кінця виводу команди
+    is_git_dir = is_git_dir:gsub("\n", "")
+
+    if is_git_dir == "true" then
+        git_branch = exec_cmd("git branch --show-current")
+        git_branch = git_branch:gsub("\n", "") -- Видаляємо символ нового рядка з кінця рядка
+        return git_branch
     else
         return "no git"
     end
@@ -21,14 +28,9 @@ function RenderStatusline()
     vim.cmd([[
         set noshowmode
     ]])
-    local current_branch = get_git_branch()
     local current_mode = vim.fn.mode()
     local current_filetype = vim.bo.filetype
     local current_file = vim.fn.expand("%:t")
-
-    local function get_term_wiidth()
-        return vim.api.nvim_get_option("columns")
-    end
 
     local function get_statusline_mode()
         local mode = {
@@ -44,10 +46,7 @@ function RenderStatusline()
     end
 
     local function get_statusline_branch()
-        if current_branch == "" then
-            return ""
-        end
-        return "%#StatusLineGitBranch#" .. string.format("  %s ", current_branch) .. "%#StatusLineArrow#" .. ""
+        return "%#StatusLineGitBranch#" .. string.format("  %s ", get_git_branch()) .. "%#StatusLineArrow#" .. ""
     end
 
     local function get_statusline_filetype()
@@ -87,3 +86,5 @@ function RenderStatusline()
         get_statusline_filetype(),
     })
 end
+
+vim.o.statusline = "%!v:lua.RenderStatusline()"

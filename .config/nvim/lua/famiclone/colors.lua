@@ -15,7 +15,7 @@ local colors = {
 
 vim.cmd("hi clear")
 vim.cmd("syntax reset")
---vim.cmd("colorscheme sonokai")
+vim.cmd("colorscheme gruvbox")
 vim.o.background = "dark"
 
 local function highlight(group, table)
@@ -38,14 +38,22 @@ local groups = {
   },
   GitSignsChange = {
     fg = colors.info,
+    bg = colors.gray
   },
   NvimTreeNormal = { fg = colors.fg, bg = colors.bg },
   NvimTreeEndOfBuffer = { fg = colors.fg, bg = colors.bg },
   NvimTreeLineNr = { fg = colors.bg, bg = colors.bg },
   NvimTreeFolderName = { fg = colors.fg },
-  NvimTreeOpenedFolderName = { fg = colors.info},
+  NvimTreeOpenedFolderName = { fg = colors.info },
   NvimTreeRootFolder = { fg = colors.gray },
-  netrwTreeBar = { fg = colors.gray, bg = colors.bg }
+  netrwTreeBar = { fg = colors.gray, bg = colors.bg },
+  StatusLineMode1 = { fg = colors.danger, bg = colors.bg, gui = "bold" },
+  StatusLineMode2 = { fg = colors.info, bg = colors.bg, gui = "bold" },
+  StatusLineMode3 = { fg = colors.warning, bg = colors.bg, gui = "bold"},
+  StatusLineMode4 = { fg = colors.gray, bg = colors.bg, gui = "bold" },
+  StatusLineGitBranch = { fg = colors.fg, bg = colors.gray },
+  StatusLineArrow = { fg = colors.gray, bg = colors.bg },
+  StatusLineFileName = { fg = colors.fg, bg = colors.bg },
 }
 
 for key, value in pairs(groups) do
