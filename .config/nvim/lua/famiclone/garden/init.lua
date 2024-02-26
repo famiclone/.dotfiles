@@ -1,5 +1,5 @@
 
-local path = "$HOME/Library/Mobile Documents/com~apple~CloudDocs/garden"
+local path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/garden"
 
 local function save_folds()
   vim.cmd([[

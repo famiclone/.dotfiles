@@ -1,7 +1,7 @@
 require("famiclone.options")
-require("famiclone.colors")
 require("famiclone.keymap")
 require("famiclone.lazy")
+require("famiclone.colors")
 require("famiclone.netrw")
 require("famiclone.statusline")
 require("famiclone.themedev")
