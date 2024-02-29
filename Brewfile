@@ -47,6 +47,7 @@ cask "font-fantasque-sans-mono"
 cask "google-chrome"
 cask "stats"
 cask "karabiner-elements"
+cask "itsycal"
 
 # AppStore
 mas "PopClip", id: 445189367

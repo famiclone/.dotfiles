@@ -78,7 +78,7 @@ function RenderStatusline()
     
     return table.concat({
         get_statusline_mode(),
-        get_statusline_branch(),
+        --get_statusline_branch(),
         "%#StatusLineFileName#",
         separator(1),
         current_file,
