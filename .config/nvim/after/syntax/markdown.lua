@@ -8,9 +8,8 @@ syntax match JournalWeekHeader /^WEEK\s\+\d\{1}\s\-.*/
 syntax match JournalMoved /^>.*/
 syntax match JournalNote /^-.*/
 syntax match JournalEvent /^o.*/
-syntax match GardenMetadataTags /^-tags.*/
+syntax match GardenMetadataTag /\v(^|\s)\zs#\w.*/
 syntax match GardenMetadataTitle /^-title.*/
-syntax match GardenMetadataTagProgramming /^-tags.*\zsprogramming\ze/
 hi! link JournalDone Comment
 hi! link JournalTodo Normal
 hi! link JournalCalendarHeaderWeekend Keyword
@@ -28,11 +27,12 @@ hi! link markdownH3Delimiter markdownH1Delimiter
 hi! link markdownH4Delimiter markdownH1Delimiter
 hi! link markdownH5Delimiter markdownH1Delimiter
 hi! link markdownH6Delimiter markdownH1Delimiter
-hi! link GardenMetadataTags Comment
+hi! link GardenMetadataTag Underlined
 hi! link GardenMetadataTitle Comment
-hi! link GardenMetadataTagProgramming Search
 
 syntax match gardenLink /<http.*>/
 hi! link gardenLink Underlined
 
+syntax match gardenMetadata /---\_.\{-}---/
+hi! link gardenMetadata Comment
 ]])

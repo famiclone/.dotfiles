@@ -38,6 +38,7 @@ end
 
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
+vim.opt.fillchars = { eob = " ", vert = "│", fold = " " }
 vim.cmd("set nofoldenable")
 vim.wo.signcolumn = 'yes'
 
