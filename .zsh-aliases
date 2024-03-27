@@ -21,6 +21,7 @@ alias la="exa -laFh --git"
 alias wget="wget -c"
 alias news="newsboat"
 alias mpcx="~/.dotfiles/scripts/mpcx"
+alias f2mp3='for f in *.flac; do ffmpeg -i "$f" -ab 320k -map_metadata 0 -id3v2_version 3 "${f%.flac}.mp3"; done'
 
 alias cat=bat
 alias :q=exit
