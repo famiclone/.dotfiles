@@ -1,3 +1,38 @@
+--local M = {}
+--
+--local intro = {
+--	"NVIM ${VERSION}",
+--	"Nvim is open source and freely distributable",
+--	"https://neovim.io/#chat",
+--	"type	:help nvim<Enter>	if you are new!",
+--	"type	:checkhealth<Enter>	to optimize Nvim",
+--	"type	:help<Enter>		for help",
+--}
+--
+--local name = "custom_intro"
+--
+--local autocmd_group = vim.api.nvim_create_augroup(name, {})
+--
+--vim.api.nvim_create_autocmd("VimEnter", {
+--	group = autocmd_group,
+--	callback = function()
+--		local win = vim.api.nvim_get_current_win()
+--		
+--		local buf = vim.api.nvim_create_buf(true, true)
+--		vim.api.nvim_buf_set_name(buf, name)
+--		vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = buf })
+--		vim.api.nvim_set_option_value("buftype", "nofile", { buf = buf })
+--		vim.api.nvim_set_option_value("swapfile", false, { buf = buf })
+--		vim.api.nvim_win_set_buf(win, buf)
+--
+--		vim.opt_local.list = false
+--		vim.opt_local.number = false
+--
+--		vim.api.nvim_buf_set_lines(buf, 1, 1, true, intro)
+--	end,
+--	once = true,
+--})
+
 require("famiclone")
 
 local on_attach = function(_, bufnr)
@@ -80,3 +115,7 @@ mason_lspconfig.setup_handlers {
     }
   end
 }
+
+vim.cmd([[
+autocmd VimEnter * if argc() == 0 | echo "Welcome to Vim!" | endif
+]])
