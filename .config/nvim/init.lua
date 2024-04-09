@@ -88,7 +88,17 @@ local servers = {
 
   lua_ls = {
     Lua = {
-      workspace = { checkThirdParty = false },
+      runtime = {
+	nonstandardSymbol = {
+	  "+=", "-=", "*=", "/=", "//=", "%=",
+	  "<<=", ">>=", "&=", "|=", "^="
+	}
+      },
+      workspace = { checkThirdParty = false,
+	library = {
+	  vim.fn.expand('~/.local/share/lua/playdate-luals/library')
+	}
+      },
       telemetry = { enable = false },
     },
   },
