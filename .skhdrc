@@ -29,7 +29,7 @@ ctrl + alt - l : yabai -m window --resize right:20:0
 shift + alt - q : yabai -m window --close
 
 # Open terminal
-alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+alt - return : wezterm
 
 # Go to space
 alt - 1: yabai -m space --focus 1
