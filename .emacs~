@@ -59,8 +59,13 @@
   :ensure t
   :hook (org-mode . visual-fill-column-mode)
   :config
-  (setq visual-fill-column-width 70)
-  (setq visual-fill-column-center-text t))
+  (setq visual-fill-column-width 120)
+  (setq visual-fill-column-center-text t)
+  (defun my-set-document-width ()
+    (let ((max-width 500))
+      (setq-local visual-fill-column-extra-width
+                  (max 0 (/ (- (window-total-width) max-width) 2)))))
+  (add-hook 'window-configuration-change-hook 'my-set-document-width))
 
 (use-package projectile
   :ensure t
@@ -83,20 +88,19 @@
   (setq lsp-keymap-prefix "C-c l")
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
          (typescript-mode . lsp)
-	 (emacs-lisp-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
-(define-key evil-normal-state-map (kbd "C-M-x") 'eval-buffer)
-(define-key evil-insert-state-map (kbd "C-j") 'copilot-accept-completion)
+
+
+(define-key evil-insert-state-map (kbd "C-j") 'copilot-accept-completion) ;; Прийняти пропозицію
 (define-key evil-insert-state-map (kbd "C-k") 'copilot-next-completion)  ;; Наступна пропозиція
 (define-key evil-insert-state-map (kbd "C-c C-c") 'copilot-clear-overlay)   ;; Скасувати пропозицію
 
 (define-key evil-normal-state-map (kbd "<up>") 'previous-buffer)
 (define-key evil-normal-state-map (kbd "<down>") 'next-buffer)
 
-(setq-default warning-minimum-level :error)
 ;; Org mode
 (unless (package-installed-p 'org)
   (package-install 'org))
@@ -109,17 +113,16 @@
   :ensure t
   :custom
   (org-roam-directory "~/Notes/")
-  (org-roam-completion-everywhere t)
   :bind (("C-c n l" . org-roam-buffer-toggle)
 	("C-c n f" . org-roam-node-find)
-	("C-c n i" . org-roam-node-insert)
-	("C-c n g" . org-roam-ui-open))
+	("C-c n i" . org-roam-node-insert))
   :config
   (org-roam-setup)
 )
 	 
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
+
 (org-roam-db-autosync-mode)
 
 (custom-set-faces
@@ -127,51 +130,17 @@
  '(org-level-1 ((t (:inherit default
 			     :weight bold
 			     :height 1.5
-			     :line-height 3
+			     :padding-top 500
+			     :padding-bottom 50
+			     :underline t
 			     ))))
- '(org-level-2 ((t (:inherit default
-			     :weight bold
-			     :height 1.3
-			     :line-height 5
-			     ))))
- '(org-level-3 ((t (:inherit default
-			     :weight bold
-			     :height 1.2
-			     :line-height 10
-			     ))))
+ '(org-level-2 ((t (:inherit default :weight bold :height 1.3))))
+ '(org-level-3 ((t (:inherit default :weight bold :height 1.2))))
  '(org-level-4 ((t (:inherit default :weight bold :height 1.1))))
  '(org-level-5 ((t (:inherit default :weight bold :height 1.0))))
  '(org-level-6 ((t (:inherit default :weight bold :height 1.0))))
  '(org-level-7 ((t (:inherit default :weight bold :height 1.0))))
  '(org-level-8 ((t (:inherit default :weight bold :height 1.0)))))
-
-(use-package org-superstar
-  :ensure t
-  :hook (org-mode . org-superstar-mode)
-  :config
-  ;; Замінити стандартні чекбокси на іконки
-  (setq org-superstar-item-bullet-alist
-        '((?+ . ?•) ;; Ви можете замінити це на будь-який символ або іконку
-	  (?* . ?+)
-          (?- . ?—)))
-
-  ;; Замінити чекбокси на інші символи
-  (setq org-superstar-todo-bullet-alist
-        '(("[ ]" .  "☐")  ;; Незавершене завдання
-          ("[X]" . "☑")  ;; Завершене завдання
-          ("[-]" . "❍")))  ;; У процесі або частково виконане завдання
-)
-
-(defun my/org-mode-checkbox-symbols ()
-  "Заміна чекбоксів у org-mode на спеціальні символи."
-  (font-lock-add-keywords org-mode
-                          '(("\\[ \\]" . "☐")  ;; Незавершене завдання
-                            ("\\[X\\]" . "☑")  ;; Завершене завдання
-                            ("\\[-\\]" . "❍")))  ;; У процесі
-  )
-
-(add-hook 'org-mode-hook 'my/org-mode-checkbox-symbols)
-
 
 ;; Create new org file without timestamp in the filename
 (setq org-roam-capture-templates
@@ -179,17 +148,13 @@
          :target (file+head "${slug}.org" "#+title: ${title}\n")
          :unnarrowed t)))
 
-(defun org-mode-setup ()
+(defun my-org-mode-font-setup ()
+  ;; Використовуємо buffer-face-mode для зміни шрифту в поточному буфері
   (setq buffer-face-mode-face '(:family "SF Pro" :height 140))
-  (setq-local line-spacing 0.3)
-  (setq display-buffer-alist
-      '(("\\.org$" . (display-buffer-same-window))))
-  (buffer-face-mode 1)
+  (buffer-face-mode 1))
 
-  (visual-line-mode 1)
-  (visual-fill-column-mode 1)
-
-  (define-key evil-insert-state-map (kbd "C-k") 'completion-at-point))
-
-(add-hook 'org-mode-hook 'org-mode-setup)
+(add-hook 'org-mode-hook 'my-org-mode-font-setup)
 (setq org-enforce-todo-dependencies t)
+(add-hook 'org-mode-hook 'visual-line-mode); wrap lines
+
+;; Keybindings
