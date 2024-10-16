@@ -169,7 +169,7 @@
   :ensure t
   :hook (org-mode . olivetti-mode)
   :config
-  (setq olivetti-body-width 120))
+  (setq olivetti-body-width 70))
 
 
 ;; Create new org file without timestamp in the filename
@@ -181,11 +181,8 @@
 (defun org-mode-setup ()
   (setq buffer-face-mode-face '(:family "SF Pro" :height 140))
   (setq-local line-spacing 0.3)
-  (setq display-buffer-alist
-      '(("\\.org$" . (display-buffer-same-window))))
+  (setq org-link-frame-setup '((file . find-file)))
   (buffer-face-mode 1)
-
-  (visual-line-mode 1)
 
   (define-key evil-insert-state-map (kbd "C-k") 'completion-at-point))
 
