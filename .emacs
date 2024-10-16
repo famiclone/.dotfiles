@@ -49,7 +49,7 @@
 (general-define-key
  :states '(normal visual)
  :prefix "SPC"
- "o" '(lambda () (interactive) (find-file "~/Notes/index.org")))
+ "o" '(lambda () (interactive) (find-file "~/Notes/learning.org")))
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
@@ -71,6 +71,7 @@
   :ensure t)
 
 (use-package lsp-mode
+  :ensure t
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
