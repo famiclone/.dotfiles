@@ -49,7 +49,7 @@
 (general-define-key
  :states '(normal visual)
  :prefix "SPC"
- "o" '(lambda () (interactive) (find-file "~/Notes/index.org")))
+ "o" '(lambda () (interactive) (find-file "~/Notes/learning.org")))
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
@@ -78,6 +78,7 @@
   :ensure t)
 
 (use-package lsp-mode
+  :ensure t
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
@@ -182,8 +183,7 @@
 (defun org-mode-setup ()
   (setq buffer-face-mode-face '(:family "SF Pro" :height 140))
   (setq-local line-spacing 0.3)
-  (setq display-buffer-alist
-      '(("\\.org$" . (display-buffer-same-window))))
+  (setq org-link-frame-setup '((file . find-file)))
   (buffer-face-mode 1)
 
   (visual-line-mode 1)
