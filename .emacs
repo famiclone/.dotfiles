@@ -19,9 +19,16 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; Використовувати straight з use-package
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
+(setq-local line-spacing 0.1)
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq evil-shift-width 2)
+(global-whitespace-mode 1)
+(setq whitespace-style '(face spaces space-mark))
+(setq whitespace-display-mappings
+      '((space-mark 32 [183] [46]))) 
 
 (unless package-archive-contents
   (package-refresh-contents))
@@ -49,7 +56,7 @@
 (general-define-key
  :states '(normal visual)
  :prefix "SPC"
- "o" '(lambda () (interactive) (find-file "~/Notes/learning.org")))
+ "o" '(lambda () (interactive) (find-file "~/Notes/index.org")))
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
@@ -118,33 +125,33 @@
   :config
   (org-roam-setup)
 )
-	 
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
 (org-roam-db-autosync-mode)
 
 (custom-set-faces
- '(org-default ((t (:family "SF Pro" :height 1.0))))
- '(org-level-1 ((t (:inherit default
-			     :weight bold
-			     :height 1.5
-			     :line-height 3
-			     ))))
- '(org-level-2 ((t (:inherit default
-			     :weight bold
-			     :height 1.3
-			     :line-height 5
-			     ))))
- '(org-level-3 ((t (:inherit default
-			     :weight bold
-			     :height 1.2
-			     :line-height 10
-			     ))))
- '(org-level-4 ((t (:inherit default :weight bold :height 1.1))))
- '(org-level-5 ((t (:inherit default :weight bold :height 1.0))))
- '(org-level-6 ((t (:inherit default :weight bold :height 1.0))))
- '(org-level-7 ((t (:inherit default :weight bold :height 1.0))))
- '(org-level-8 ((t (:inherit default :weight bold :height 1.0)))))
+  '(whitespace-newline ((t (:foreground "lightgray"))))
+  '(org-default ((t (:family "SF Pro" :height 1.0))))
+  '(org-level-1 ((t (:inherit default
+            :weight bold
+            :height 1.5
+            :line-height 3
+            ))))
+  '(org-level-2 ((t (:inherit default
+            :weight bold
+            :height 1.3
+            :line-height 5
+            ))))
+  '(org-level-3 ((t (:inherit default
+            :weight bold
+            :height 1.2
+            :line-height 10
+            ))))
+  '(org-level-4 ((t (:inherit default :weight bold :height 1.1))))
+  '(org-level-5 ((t (:inherit default :weight bold :height 1.0))))
+  '(org-level-6 ((t (:inherit default :weight bold :height 1.0))))
+  '(org-level-7 ((t (:inherit default :weight bold :height 1.0))))
+  '(org-level-8 ((t (:inherit default :weight bold :height 1.0)))))
 
 (use-package org-superstar
   :ensure t
