@@ -62,13 +62,6 @@
 (setq display-line-numbers-type 'relative)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 
-(use-package visual-fill-column
-  :ensure t
-  :hook (org-mode . visual-fill-column-mode)
-  :config
-  (setq visual-fill-column-width 70)
-  (setq visual-fill-column-center-text t))
-
 (use-package projectile
   :ensure t
   :diminish projectile-mode
@@ -180,6 +173,12 @@
 
 (add-hook 'org-mode-hook 'my/org-mode-checkbox-symbols)
 
+(use-package olivetti
+  :ensure t
+  :hook (org-mode . olivetti-mode)
+  :config
+  (setq olivetti-body-width 70))
+
 
 ;; Create new org file without timestamp in the filename
 (setq org-roam-capture-templates
@@ -192,9 +191,6 @@
   (setq-local line-spacing 0.3)
   (setq org-link-frame-setup '((file . find-file)))
   (buffer-face-mode 1)
-
-  (visual-line-mode 1)
-  (visual-fill-column-mode 1)
 
   (define-key evil-insert-state-map (kbd "C-k") 'completion-at-point))
 
